@@ -3,7 +3,7 @@
 fun main() {
     val pattern = Patterns()
     pattern.rightHalfPyramid()
-
+pattern.leftHalfPyramid()
 }
 
 
@@ -17,5 +17,17 @@ class Patterns{
             println()
         }
         println("Right Half Pattern END")
+    }
+
+    fun leftHalfPyramid(){
+        println("Left Pyramid")
+        val row =5
+        for (i in 0..5){
+            for (x in 0..row-i){
+                print("*")
+            }
+            println()
+        }
+        println("Left Pyramid END")
     }
 }
