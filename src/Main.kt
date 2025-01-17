@@ -4,6 +4,7 @@ fun main() {
     val pattern = Patterns()
     pattern.rightHalfPyramid()
 pattern.leftHalfPyramid()
+    pattern.mirroredStarPattern()
 }
 
 
@@ -17,6 +18,7 @@ class Patterns{
             println()
         }
         println("Right Half Pattern END")
+        println()
     }
 
     fun leftHalfPyramid(){
@@ -29,5 +31,25 @@ class Patterns{
             println()
         }
         println("Left Pyramid END")
+        println()
+    }
+
+    fun mirroredStarPattern(){
+        val row = 5;
+        println("Mirrored Star Pattern")
+        for (i in 0..5){
+            for (z in 0..row-i){
+                print(" ")
+            }
+            for (x in 0..i){
+                print("*")
+            }
+
+            println()
+
+        }
+        println("Mirrored Star Pattern END")
+        println()
+
     }
 }
