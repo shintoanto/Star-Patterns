@@ -8,6 +8,7 @@ pattern.leftHalfPyramid()
     pattern.pyramidStarPattern()
     pattern.invertedFullPyramid()
     pattern.rhombusPattern()
+    pattern.diamondPattern()
 
 }
 
@@ -106,5 +107,39 @@ class Patterns{
         }
         println("Rhombus pattern END")
         println()
+    }
+
+    fun diamondPattern(){
+        println("Diamond Pattern")
+        val row=5
+        for (i in 0..5){
+            for (n in 0..row-i){
+                print("   ")
+            }
+            for (n in 0..i){
+                print(" * ")
+            }
+            for (n in 1..i){
+                print(" * ")
+            }
+            println()
+        }
+
+        for (i in 1..5){
+            for (n in 0..i){
+                print("   ")
+            }
+            for (n in 0..row-i){
+                print(" * ")
+            }
+
+
+            for (n in 1..row-i){
+                print(" * ")
+            }
+            println()
+        }
+        println("Diamond Pattern END")
+
     }
 }
