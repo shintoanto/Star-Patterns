@@ -105,5 +105,6 @@ class Patterns{
             println()
         }
         println("Rhombus pattern END")
+        println()
     }
 }
