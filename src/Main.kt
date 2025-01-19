@@ -1,3 +1,5 @@
+
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
@@ -9,57 +11,79 @@ pattern.leftHalfPyramid()
     pattern.invertedFullPyramid()
     pattern.rhombusPattern()
     pattern.diamondPattern()
+    pattern.hourGlassPattern()
 
 }
 
 
+
 class Patterns{
+
+    private val msg=Printings()
+    private val row=5
+    private val loops=Loops()
+
+
+
+
     fun rightHalfPyramid(){
-        println("1 Right Half Pattern")
-        for (i in 0..5){
-            for (x in 0..i){
-                print("*")
+        msg.msg("1 Right Half Pattern")
+
+
+        loops.loops( z = 0, n = 5){
+           loops.loops(z=0, n = row){
+               msg.prints(" ")
+           }
+            loops.loops(z=0, n = 5){
+                msg.prints("  ")
             }
-            println()
+            msg.println()
         }
-        println("Right Half Pattern END")
-        println()
+
+//        for (q in 0..5){
+//            for (x in 0..i){
+//                msg.print("*")
+//            }
+//            msg.println()
+//        }
+        msg.msg("Right Half Pattern END")
+        msg.println()
     }
 
     fun leftHalfPyramid(){
-        println("Left Pyramid")
-        val row =5
+        msg.msg("Left Pyramid")
+
         for (i in 0..5){
             for (x in 0..row-i){
                 print("*")
             }
             println()
         }
-        println("Left Pyramid END")
-        println()
+        msg.msg("Left Pyramid END")
+        msg.println()
     }
 
     fun mirroredStarPattern(){
-        val row = 5
-        println("Mirrored Star Pattern")
+
+              println("Mirrored Star Pattern")
         for (i in 0..5){
             for (z in 0..row-i){
                 print(" ")
             }
             for (x in 0..i){
-                print("*")
+                msg.prints("*")
             }
 
-            println()
+            msg.println()
 
         }
-        println("Mirrored Star Pattern END")
-        println()
+        msg.msg("Mirrored Star Pattern END")
+        msg.println()
 
     }
 
     fun pyramidStarPattern(){
-        val row =5
+
         for (i in 0..5){
             for (x in 0..row-i){
                 print(" ")
@@ -76,42 +100,42 @@ class Patterns{
     }
 
     fun invertedFullPyramid(){
-        print("Inverted full pyramid")
-        val x =5
+        msg.msg("Inverted full pyramid")
+
         for(i in 0..5){
             for (n in 0..i){
                 print(" ")
             }
-            for (v in 0.. x-i){
+            for (v in 0.. row-i){
                 print("*")
             }
-            for (c in 1.. x-i){
+            for (c in 1.. row-i){
                 print("*")
             }
             println()
         }
-        println("Inverted full pyramid END")
+        msg.msg("Inverted full pyramid END")
     }
 
     fun rhombusPattern(){
-        println("Rhombus pattern")
-        val x =5
+        msg.msg("Rhombus pattern")
+
         for(i in 0..5){
-            for (n in 0..x-i){
+            for (n in 0..row-i){
                 print(" ")
             }
-            for (v in 0.. x){
+            for (v in 0.. row){
                 print("*")
             }
             println()
         }
-        println("Rhombus pattern END")
+        msg.msg("Rhombus pattern END")
         println()
     }
 
     fun diamondPattern(){
-        println("Diamond Pattern")
-        val row=5
+        msg.msg("Diamond Pattern")
+
         for (i in 0..5){
             for (n in 0..row-i){
                 print("   ")
@@ -139,7 +163,39 @@ class Patterns{
             }
             println()
         }
-        println("Diamond Pattern END")
+        msg.msg("Diamond Pattern END")
 
+    }
+
+    fun hourGlassPattern(){
+        msg.msg("Hourglass Pattern")
+        for (i in 0..5){
+            for(x in 0..i){
+                print("   ")
+            }
+            for (n in 0..row-i){
+                print(" * ")
+            }
+            for (n in 1..row-i){
+                print(" * ")
+            }
+            println()
+
+        }
+
+        for (i in 0..5){
+            for(x in 0..row-i){
+                print("   ")
+            }
+            for (n in 0..i){
+                print(" * ")
+            }
+            for (n in 1..i){
+                print(" * ")
+            }
+            println()
+
+        }
+        msg.msg("Hourglass pattern END")
     }
 }
