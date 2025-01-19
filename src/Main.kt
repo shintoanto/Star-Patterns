@@ -7,6 +7,7 @@ pattern.leftHalfPyramid()
     pattern.mirroredStarPattern()
     pattern.pyramidStarPattern()
     pattern.invertedFullPyramid()
+    pattern.rhombusPattern()
 
 }
 
@@ -89,5 +90,20 @@ class Patterns{
             println()
         }
         println("Inverted full pyramid END")
+    }
+
+    fun rhombusPattern(){
+        println("Rhombus pattern")
+        val x =5
+        for(i in 0..5){
+            for (n in 0..x-i){
+                print(" ")
+            }
+            for (v in 0.. x){
+                print("*")
+            }
+            println()
+        }
+        println("Rhombus pattern END")
     }
 }
