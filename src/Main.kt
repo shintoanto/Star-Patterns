@@ -10,6 +10,7 @@ fun main() {
     pattern.rhombusPattern()
     pattern.diamondPattern()
     pattern.hourGlassPattern()
+    pattern.hollowSquarePattern()
 
 }
 
@@ -185,5 +186,20 @@ class Patterns {
 
         }
         msg.msg("Hourglass pattern END")
+    }
+
+
+    fun hollowSquarePattern(){
+        val row =5
+        for (i in 0..row){
+            for (x in 0..row){
+                if (i==0||i==5||x==0||x==5){
+                    print("* ")
+                }else{
+                    print("  ")
+                }
+            }
+            println()
+        }
     }
 }
