@@ -1,11 +1,9 @@
-
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
     val pattern = Patterns()
     pattern.rightHalfPyramid()
-pattern.leftHalfPyramid()
+    pattern.leftHalfPyramid()
     pattern.mirroredStarPattern()
     pattern.pyramidStarPattern()
     pattern.invertedFullPyramid()
@@ -16,45 +14,35 @@ pattern.leftHalfPyramid()
 }
 
 
+class Patterns {
 
-class Patterns{
-
-    private val msg=Printings()
-    private val row=5
-    private val loops=Loops()
+    private val msg = Printings()
+    private val row = 5
 
 
-
-
-    fun rightHalfPyramid(){
+    fun rightHalfPyramid() {
         msg.msg("1 Right Half Pattern")
 
+            for (q in 0..5) {
 
-        loops.loops( z = 0, n = 5){
-           loops.loops(z=0, n = row){
-               msg.prints(" ")
-           }
-            loops.loops(z=0, n = 5){
-                msg.prints("  ")
+                for (x in 0..q) {
+                    msg.prints("*")
+                }
+                for (b in 0..row){
+                    msg.prints(" ")
+                }
+                msg.println()
             }
-            msg.println()
-        }
 
-//        for (q in 0..5){
-//            for (x in 0..i){
-//                msg.print("*")
-//            }
-//            msg.println()
-//        }
         msg.msg("Right Half Pattern END")
         msg.println()
     }
 
-    fun leftHalfPyramid(){
+    fun leftHalfPyramid() {
         msg.msg("Left Pyramid")
 
-        for (i in 0..5){
-            for (x in 0..row-i){
+        for (i in 0..5) {
+            for (x in 0..row - i) {
                 print("*")
             }
             println()
@@ -63,14 +51,14 @@ class Patterns{
         msg.println()
     }
 
-    fun mirroredStarPattern(){
+    fun mirroredStarPattern() {
 
-              println("Mirrored Star Pattern")
-        for (i in 0..5){
-            for (z in 0..row-i){
+        println("Mirrored Star Pattern")
+        for (i in 0..5) {
+            for (z in 0..row - i) {
                 print(" ")
             }
-            for (x in 0..i){
+            for (x in 0..i) {
                 msg.prints("*")
             }
 
@@ -82,16 +70,16 @@ class Patterns{
 
     }
 
-    fun pyramidStarPattern(){
+    fun pyramidStarPattern() {
 
-        for (i in 0..5){
-            for (x in 0..row-i){
+        for (i in 0..5) {
+            for (x in 0..row - i) {
                 print(" ")
             }
-            for (n in 0..i){
+            for (n in 0..i) {
                 print("*")
             }
-            for (n in 1..i){
+            for (n in 1..i) {
                 print("*")
             }
 
@@ -99,17 +87,17 @@ class Patterns{
         }
     }
 
-    fun invertedFullPyramid(){
+    fun invertedFullPyramid() {
         msg.msg("Inverted full pyramid")
 
-        for(i in 0..5){
-            for (n in 0..i){
+        for (i in 0..5) {
+            for (n in 0..i) {
                 print(" ")
             }
-            for (v in 0.. row-i){
+            for (v in 0..row - i) {
                 print("*")
             }
-            for (c in 1.. row-i){
+            for (c in 1..row - i) {
                 print("*")
             }
             println()
@@ -117,14 +105,14 @@ class Patterns{
         msg.msg("Inverted full pyramid END")
     }
 
-    fun rhombusPattern(){
+    fun rhombusPattern() {
         msg.msg("Rhombus pattern")
 
-        for(i in 0..5){
-            for (n in 0..row-i){
+        for (i in 0..5) {
+            for (n in 0..row - i) {
                 print(" ")
             }
-            for (v in 0.. row){
+            for (v in 0..row) {
                 print("*")
             }
             println()
@@ -133,32 +121,32 @@ class Patterns{
         println()
     }
 
-    fun diamondPattern(){
+    fun diamondPattern() {
         msg.msg("Diamond Pattern")
 
-        for (i in 0..5){
-            for (n in 0..row-i){
+        for (i in 0..5) {
+            for (n in 0..row - i) {
                 print("   ")
             }
-            for (n in 0..i){
+            for (n in 0..i) {
                 print(" * ")
             }
-            for (n in 1..i){
+            for (n in 1..i) {
                 print(" * ")
             }
             println()
         }
 
-        for (i in 1..5){
-            for (n in 0..i){
+        for (i in 1..5) {
+            for (n in 0..i) {
                 print("   ")
             }
-            for (n in 0..row-i){
+            for (n in 0..row - i) {
                 print(" * ")
             }
 
 
-            for (n in 1..row-i){
+            for (n in 1..row - i) {
                 print(" * ")
             }
             println()
@@ -167,30 +155,30 @@ class Patterns{
 
     }
 
-    fun hourGlassPattern(){
+    fun hourGlassPattern() {
         msg.msg("Hourglass Pattern")
-        for (i in 0..5){
-            for(x in 0..i){
+        for (i in 0..5) {
+            for (x in 0..i) {
                 print("   ")
             }
-            for (n in 0..row-i){
+            for (n in 0..row - i) {
                 print(" * ")
             }
-            for (n in 1..row-i){
+            for (n in 1..row - i) {
                 print(" * ")
             }
             println()
 
         }
 
-        for (i in 0..5){
-            for(x in 0..row-i){
+        for (i in 0..5) {
+            for (x in 0..row - i) {
                 print("   ")
             }
-            for (n in 0..i){
+            for (n in 0..i) {
                 print(" * ")
             }
-            for (n in 1..i){
+            for (n in 1..i) {
                 print(" * ")
             }
             println()
